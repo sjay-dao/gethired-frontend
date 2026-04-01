@@ -14,7 +14,7 @@ export default function JobForm({ refreshJobs }) {
     e.preventDefault();
     if (!company || !role || !source || !date) return alert("Fill all required fields");
 
-    await fetch("http://localhost:5000/jobs", {
+    await fetch("https://gethired-backend-rjln.onrender.com/jobs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ company, role, source, date, status, notes }),

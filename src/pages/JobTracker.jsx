@@ -10,7 +10,7 @@ export default function JobTracker() {
 
   const fetchJobs = async () => {
     try {
-      const res = await fetch("http://localhost:5000/jobs");
+      const res = await fetch("https://gethired-backend-rjln.onrender.com/jobs");
       const data = await res.json();
       setJobs(data);
     } catch (err) {

@@ -5,7 +5,7 @@ export default function JobList({ jobs, refreshJobs, viewMode }) {
   const [localNotes, setLocalNotes] = useState({});
 
   const updateJob = async (id, status, notes) => {
-    await fetch(`http://localhost:5000/jobs/${id}`, {
+    await fetch(`https://gethired-backend-rjln.onrender.com/jobs/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status, notes }),
